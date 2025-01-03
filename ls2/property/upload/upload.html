@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Upload details</title>
+    <link rel="stylesheet" href="upload.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <style>
+      .form-select{
+        height: 40px;
+      }
+      .btn-group{
+        border-radius: 0.5rem;
+      }
+      @media screen and (max-width:900px){
+        img{
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="mb-4">
+            <h1>Add Property</h1>
+          </div>
+          <section class="card card-body shadow-sm border-0 p-4 mb-4" id="basic-info">
+            <h2 class="h4 mb-4"><i class="fa-solid fa-circle-info" style="color: #e22c18;"></i> Basic Info</h2>
+            <div class="mb-3">
+              <label class="form-label" for="title">Title<span class="text-danger">*</span></label>
+              <input class="form-control" type="text" id="title" placeholder="Title for your property" required>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <label class="form-label" for="category">Category<span class="text-danger">*</span></label>
+                <select class="form-select py-0" id="category" required >
+                  <option value="choose">Choose category</option>
+                  <option value="Rent">For rent</option>
+                  <option value="Sale">For sale</option>
+                </select>
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label" for="type">Property type<span class="text-danger">*</span></label>
+                <select class="form-select py-0" id="type" required >
+                  <option value="choose">Choose property type</option>
+                  <option value="Rent">Apartment</option>
+                  <option value="Sale">House</option>
+                  <option value="Sale">Daily Rental</option>
+                </select>
+              </div>
+            </div>
+          </section>
+          <section class="card card-body shadow-sm border-0 p-4 mb-4" id="location">
+            <h2 class="h4 mb-4"><i class="fa-solid fa-location-dot" style="color: #e22c18;"></i> Location</h2>
+            <div class="row">
+              <div class="col-sm-6 mb-3">
+                <label class="form-label" for="country">Country/Region<span class="text-danger">*</span></label>
+                <select class="form-select py-0" id="country" required style="height: 40px;">
+                  <option value="choose">Choose country</option>
+                  <option value="india">India</option>
+                  <option value="us">United States</option>
+                  <option value="sl">Sri Lanka</option>
+                </select>
+              </div>
+              <div class="col-sm-6 mb-3">
+                <label class="form-label" for="city">City<span class="text-danger">*</span></label>
+                <select class="form-select py-0" id="city" required >
+                  <option value="choose">Choose city</option>
+                  <option value="mb">Mumbai</option>
+                  <option value="bg">Bangalore</option>
+                  <option value="hyd">Hyderabad</option>
+                  <option value="dl">Delhi</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8 mb-3">
+                <label class="form-label" for="district">District<span class="text-danger">*</span></label>
+                <select class="form-select py-0" id="district" required >
+                  <option value="choose">Choose district</option>
+                  <option value="knl">Kurnool</option>
+                  <option value="nlr">Nellore</option>
+                  <option value="ct">Chittoor</option>
+                  <option value="tpt">Tirupati</option>
+                </select>
+              </div>
+              <div class="col-sm-4 mb-3">
+                <label class="form-label" for="code">Zip code<span class="text-danger">*</span></label>
+                <input class="form-control" type="text" id="title" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="address">Street Address<span class="text-danger">*</span></label>
+              <input class="form-control" type="text" id="address" required>
+            </div>
+            <div class="mb-2">
+              <label class="form-label" for="address">Display on the map</label>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122843.21987710104!2d77.9574002508482!3d15.811828665329157!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb5ddf506b7c6c9%3A0x19a7ac74f858d6f2!2sKurnool%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1714737845762!5m2!1sen!2si" width="470" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </section>
+          <section class="card card-body shadow-sm border-0 p-4 mb-4">
+            <h2 class="h4 mb-4"><i class="fa-solid fa-pen-to-square" style="color: #e22c18;"></i> Property details</h2>
+            <div class="mb-4" style="max-width: 25rem;">
+              <label class="form-label" for="area">Total area, sq.m</label>
+              <input class="form-control" type="number" id="area" min="20">
+            </div>
+            <div class="mb-4">
+              <label class="form-label d-block fw-bold pb-1 mb-2">Bedrooms</label>
+              <div class="btn-group btn-group-sm" role="group">
+                <input class="btn-check" type="radio" id="studio" name="bedrooms">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="studio">Studio</label>
+                <input class="btn-check" type="radio" id="bedroom-1" name="bedrooms">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="bedroom-1">1</label>
+                <input class="btn-check" type="radio" id="bedroom-2" name="bedrooms">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="bedroom-2">2</label>
+                <input class="btn-check" type="radio" id="bedroom-3" name="bedrooms">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="bedroom-3">3</label>
+                <input class="btn-check" type="radio" id="bedroom-4" name="bedrooms">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="bedroom-4">4</label>
+                <input class="btn-check" type="radio" id="bedroom-5" name="bedrooms">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="bedroom-5">5+</label>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="form-label d-block pb-1 mb-2 fw-bold">Bathrooms</label>
+              <div class="btn-group btn-group-sm" role="group">
+                <input class="btn-check" type="radio" id="bathroom-1" name="bathrooms">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="bathroom-1">1</label>
+                <input class="btn-check" type="radio" id="bathroom-2" name="bathrooms">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="bathroom-2">2</label>
+                <input class="btn-check" type="radio" id="bathroom-3" name="bathrooms">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="bathroom-3">3</label>
+                <input class="btn-check" type="radio" id="bathroom-4" name="bathrooms">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="bathroom-4">4</label>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="form-label d-block fw-bold pb-1 mb-2">Parking spots</label>
+              <div class="btn-group btn-group-sm" role="group">
+                <input class="btn-check" type="radio" id="parking-1" name="parking">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="parking-1">1</label>
+                <input class="btn-check" type="radio" id="parking-2" name="parking">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="parking-2">2</label>
+                <input class="btn-check" type="radio" id="parking-3" name="parking">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="bathroom-3">3</label>
+                <input class="btn-check" type="radio" id="parking-4" name="parking">
+                <label class="btn btn-outline-secondary fw-normal p-2 px-3" for="parking-4">4</label>
+              </div>
+            </div>
+            <div  class="mb-4">
+              <label class="form-label" for="description">Description</label>
+              <textarea class="form-control" id="description" rows="5" placeholder="Describe your property"></textarea>
+            </div>
+          </section>
+
+          <section class="card card-body shadow-sm border-0 p-4 mb-4">
+            <h2 class="h4 mb-4"><i class="fa-solid fa-money-bills" style="color: #e22c18;"></i> Price</h2>
+            <div class="mb-4">
+              <label class="form-label" for="price">Price <span class="text-danger">*</span></label>
+              <div class="row">
+                <div class="col-sm-8">
+                  <input class="form-control" type="number" min="5000" required>
+                </div>
+                <div class="col-sm-4">
+                  <select class="form-select py-0" id="district" required >
+                    <option value="month">per month</option>
+                    <option value="day">per day</option>
+                    <option value="week">per week</option>
+                    <option value="year">per year</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card card-body shadow-sm border-0 p-4 mb-4">
+            <h2 class="h4 mb-4"><i class="fa-regular fa-image" style="color: #e22c18;"></i> Photos/ Video</h2>
+            <div class="alert alert-primary" role="alert">
+              <div class="d-flex">
+                <i class="fa-solid fa-circle-exclamation me-2 mt-1" style="color: #3c76f2;"></i>
+                <p class="fs-sm" style="color: #3c76f2;">The maximum photo size is 8 MB.Formats: jpg, jpeg or png<br>Put the main picture first<br>The maximum video size is 10 MB</p>
+              </div>
+            </div>
+            <div class="border p-4">
+              <button class="btn btn-danger" style="margin-left:160px;"><i class="fa-solid fa-cloud-arrow-up"></i> Upload photos/video</button>
+              <h5 class="text-muted p-2" style="margin-left:170px;">or drag them in</h5>
+            </div>
+          </section>
+
+          <section class="card card-body shadow-sm border-0 p-4 mb-4">
+            <h2 class="h4 mb-4"><i class="fa-solid fa-phone-volume" style="color: #e22c18;"></i> Contacts</h2>
+            <div class="row">
+              <div class="col-sm-6">
+                <label class="form-label" for="fn">First name<span class="text-danger">*</span></label>
+                <input class="form-control" type="text" required id="fn">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label" for="sn">Second name<span class="text-danger">*</span></label>
+                <input class="form-control" type="text" required id="sn">
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-sm-6">
+                <label class="form-label" for="fn">Email<span class="text-danger">*</span></label>
+                <input class="form-control" type="email" required id="fn">
+              </div>
+              <div class="col-sm-6">
+                <label class="form-label" for="sn">Phone number<span class="text-danger">*</span></label>
+                <input class="form-control" type="text" required id="sn">
+              </div>
+            </div>
+          </section>
+          <a class="btn btn-danger btn-lg" style="display: block;margin: auto;width: 220px;margin-bottom: 20px;">Save and Continue</a>
+        </div>
+        <div class="col-md-4">
+          <img src="https://th.bing.com/th/id/OIP.dXFQMhfAUGJhG-pQ7WIeuAHaHa?w=600&h=600&rs=1&pid=ImgDetMain" style="width:350px; position:fixed;top: 0;margin-top: 40px;height: 400px;">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
